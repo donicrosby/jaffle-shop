@@ -20,4 +20,5 @@ renamed as (
 
 )
 
+--------- get model
 select * from renamed
