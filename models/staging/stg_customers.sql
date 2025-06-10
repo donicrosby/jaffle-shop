@@ -1,3 +1,4 @@
+-- editing the file within the IDE
 with
 
 source as (
