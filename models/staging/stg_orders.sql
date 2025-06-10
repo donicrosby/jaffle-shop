@@ -22,6 +22,8 @@ renamed as (
         {{ cents_to_dollars('subtotal') }} as subtotal,
         {{ cents_to_dollars('tax_paid') }} as tax_paid,
         {{ cents_to_dollars('order_total') }} as order_total,
+        {{ cents_to_dollars('(case when tax_paid > 0 then subtotal / tax_paid else 0 end)') }} as tax_rate,
+        
 
         ---------- timestamps
         {{ dbt.date_trunc('day','ordered_at') }} as ordered_at
