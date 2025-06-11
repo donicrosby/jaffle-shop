@@ -30,6 +30,8 @@ renamed as (
 
     from source
 
+    where order_id is not null
+
 )
 
 select * from renamed
